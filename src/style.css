@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body , html {
+    height: 100%;
+    margin:0;
+    width: 100%;    
+}
+  /*  --------------Header----------------*/
+  .header {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    color: #212529;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    margin-top: -15px;
+    margin-left:90px;
+    width: 150px;
+    cursor: pointer;   
+
+}
+
+.item-list  {
+  display: flex;
+  width: 50%;
+  align-items: center ;
+  margin-left : -10%;
+
+
+}
+
+.item {
+  text-decoration: none;
+  color : #191919  ;
+  padding-right: 10%;
+  font-weight: 600 ;
+  cursor: pointer;
+  margin-left:10px;
+
+}
+
+
+.icons{
+  margin-right: 20px;
+  width:90px ;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+.menu-icon {
+
+  display: none;
+}
+
+
+.item-list2  { 
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 71px;
+  left: 0;
+  width: 40%;
+  
+  background-color:  #dbd4c8;
+  border-radius: 0 20px 20px 0;
+  
+    
+}
+
+
+@media screen and (max-width: 880px) {
+  .item-list {
+    display: none;
+  
+  }
+
+  .logo-list2{
+    display: flex;
+    height: 100px;
+    justify-content: center;  
+    align-items: center;
+    margin: 20px;
+
+
+    
+  }
+
+  .logo-list2 img {
+    width: 50%;
+    border-radius: 50%;
+    margin-right: 10px;
+  
+  } 
+
+  .logo-list2 span {
+      font-family:cursive;
+      font-weight:700;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .item {
+    text-align: left;
+    height: 70px;
+    border-bottom: white 1px solid;
+    padding: 30px 10px ;
+  }
+     .item-list2{
+      display:flex;
+         }
+
+}
+
+  /*  --------------Footer----------------*/
+
+
+footer{
+  
+
+
+
+} 
+
+footer ul 
+{
+margin : 50px;
+}
+
+
+footer ul li {
+list-style: none;
+color: white;
+
+
+}
+
+
+footer ul li:first-child
+{
+  font-weight: Bold ;
+}
+
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
