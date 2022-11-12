@@ -1,0 +1,27 @@
+.home{
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction :column;
+    align-items:center; 
+    justify-content: center;
+    object-fit: contain;
+}
+.home img{
+    object-fit:cover;
+    height:100%;
+    top:0;
+    width:100%;
+    position: fixed;
+    z-index:-1;
+}
+
+.home h1 {
+   color :  #0A460B ;
+   font-size: 30px;
+   text-align: center;
+   position: relative ;
+   font-family: Gabriola  ;
+   z-index:-1;
+   
+}
