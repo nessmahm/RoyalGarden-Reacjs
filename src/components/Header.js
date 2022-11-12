@@ -6,6 +6,12 @@ import {RiShoppingCartFill} from 'react-icons/ri'
 import { IconContext } from "react-icons";
 import {CgMenuOreos} from 'react-icons/cg';
 import { useState } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+const Logo = styled(Link)`
+
+`
 
 function Header() {
   const [menu,setMenu]=useState(false);
@@ -19,11 +25,10 @@ function Header() {
     <CgMenuOreos  onClick={handleMenu} />
     
     </IconContext.Provider>
-
-    <img src={logo} className="logo"/>
+   <Logo to="/"><img src={logo} className="logo"/></Logo>
     
     
-    <Navbar  nameclass = {menu ? "item-list2" : "item-list" } />
+    <Navbar  nameclass = {menu   ? "item-list2" : "item-list" } />
   
 
     <div className="icons">

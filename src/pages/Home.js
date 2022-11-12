@@ -12,7 +12,7 @@ const Container = styled.div `
 
 const Element = styled.div`
  display : flex; 
- background-color: ${props=>props.Color || "white "};
+ background-color: ${props=>props.couleur || "white "};
  margin-bottom:50px;
 
 
@@ -59,7 +59,7 @@ font-size:18px;
 
  
 const LinkB = styled(Link)`
-color : ${props=>props.Color || "white "}
+color : ${props=>props.couleur || "white "}
 `
 
 function Home() {
@@ -68,7 +68,7 @@ function Home() {
     <Container>
 
    {/*first article */}
-   <Element Color = "#faf7f2">
+   <Element couleur = "#faf7f2">
    
    
    <ImageContainer>
@@ -79,19 +79,19 @@ function Home() {
    <Article>
         <Title>The Benefits of Houseplants : </Title>
         <Text>Not only do indoor plants enhance the overall appearance of a space, but studies show they boost moods, increase creativity, reduce stress, and eliminate air pollutants—making for a healthier, happier you.</Text>
-        <LinkB to='/' Color="#856e51" >Read more</LinkB>
+        <LinkB to='/' oculeur="#856e51" >Read more</LinkB>
     </Article>
    
 
   </Element>
   
  {/* second article */}
- <Element Color = "#f0f6fb">
+ <Element couleur = "#f0f6fb">
    
     <Article>
         <Title>How to Keep Potted Plants Alive : </Title>
         <Text>While the rules for all plants are fairly similar, they will differ slightly depending on the environment your plant is going to be living in. If you’re mostly wondering how to take care of potted indoor plants, then this is the section for you. Here are our best tips to keep houseplants alive:</Text>
-        <LinkB to='/' Color="#7f7d7a" >Here</LinkB>
+        <LinkB to='/' couleur="#7f7d7a" >Here</LinkB>
     </Article>
     <ImageContainer>
     <Plantimg src={plant2} alt="plant-image"/>

@@ -3,19 +3,21 @@ import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
 
 
-
-
 const Item = styled.li `
 width : 250px;
-height:100%;
+height:350px;
 border-bottom : 1px solid #0B9446;
 color : #1E4B2D;
 list-style: none;
 margin:10px;
 `
+
 const ItemImage = styled.img `
 width : 250px;
+height:70%
+
 `
+
 const View = styled.div`
 height : 30px;
 weidth : 250px;
@@ -25,19 +27,16 @@ color : white;
 margin-bottom:10px;
 padding :5px;
 
-
-
 `
 
 
-function Product( {plant} ) {
+function ProductElement( {product} ) {
   const navigate = useNavigate();
-  //const item = items.products;
   return (
-      <Item key={plant.id} >
-      <ItemImage src ={plant.image} alt={plant.image} />
-      <p> {plant.name} </p>
-      <p> {plant.price} </p>
+      <Item  >
+      <ItemImage src ={product.image} alt={product.image} />
+      <p> {product.name} </p>
+      <p> {product.price} </p>
       <View onClick={() => { navigate(`` );
               }} >
       <p>View product </p> 
@@ -50,4 +49,4 @@ function Product( {plant} ) {
     
 }
 
-export default Product
+export default ProductElement

@@ -4,7 +4,9 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router , Route , Routes } from 'react-router-dom'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
-import Plants from './pages/Plants.js'
+import Products from './pages/Products.js'
+import PlantCare from './pages/PlantCare.js'
+import Gifts from './pages/Gifts.js'
 import './style.css';
 import Home from './pages/Home'
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +16,9 @@ root.render(
        <Header/>
     <Routes>
     <Route path="/" element={<Home/>}    />
-    <Route path="/plants" element={<Plants/>}    />
+    <Route path="/:product" element={<Products/>}    />
+    <Route path="/plantcare" element={<PlantCare/>}    />
+    <Route path="/gifts" element={<Gifts/>}    />
 
     </Routes>
     <Footer/>

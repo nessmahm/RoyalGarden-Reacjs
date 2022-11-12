@@ -4,20 +4,13 @@ import {navBarItems} from '../assets/Data'
 import greenhouse from '../assets/Images/greenhouse.png'
 import styled from 'styled-components'
 
-
-const SLink = styled(Link)`
-  &:hover {border-bottom: black solid 2px ; 
-  font-size:18px;
-  }
-
-`
-
 function Navbar( {nameclass}) {
+
   return (
 
    <ul className={nameclass} >
    { navBarItems.map((item)=>
-    <SLink to ={item.path} className="item" key={item.index} > {item.name} </SLink>
+    <Link to={(`/${item.name.toLowerCase().replace(/ /g, "") }`)  }   className="item" key={item.name} > {item.name} </Link>
    
    )}
 

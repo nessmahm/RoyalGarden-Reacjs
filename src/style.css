@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: space-between;
     
+    
 }
 
 .logo{
@@ -27,6 +28,7 @@
     cursor: pointer;   
 
 }
+
 
 .item-list  {
   display: flex;
@@ -47,6 +49,10 @@
 
 }
 
+.item:hover {
+  border-bottom: black solid 2px ; 
+  font-size:18px;
+}
 
 .icons{
   margin-right: 20px;
@@ -58,7 +64,6 @@
 
 
 .menu-icon {
-
   display: none;
 }
 
@@ -70,7 +75,8 @@
   top: 71px;
   left: 0;
   width: 40%;
-  
+  z-index: 99;
+
   background-color:  #dbd4c8;
   border-radius: 0 20px 20px 0;
   
@@ -90,9 +96,7 @@
     justify-content: center;  
     align-items: center;
     margin: 20px;
-
-
-    
+   
   }
 
   .logo-list2 img {
@@ -118,6 +122,7 @@
     border-bottom: white 1px solid;
     padding: 30px 10px ;
   }
+  
      .item-list2{
       display:flex;
          }
@@ -150,7 +155,7 @@ color: white;
 
 footer ul li:first-child
 {
-  font-weight: Bold ;
+  font-weight: bold ;
 }
 
 
