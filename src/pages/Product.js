@@ -100,10 +100,6 @@ text-align:center;
 const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 const AmountContainer = styled.div`
@@ -145,6 +141,7 @@ const Button = styled.button`
   background-color: white;
   cursor: pointer;
   font-weight: 500;
+
   &:hover{
       background-color: #f8f4f4;
   }

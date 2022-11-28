@@ -37,8 +37,9 @@ function Products() {
   const [criteria,setcriteria]=useState(null);
   const [products,setproducts]=useState(item.products);
 
-  console.log(item)
+  console.log(products)
   useEffect(() => {
+    setproducts(item.products)
   }, [item,product]);
   
   return (
