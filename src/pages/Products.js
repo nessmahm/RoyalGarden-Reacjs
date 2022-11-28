@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import {navBarItems} from '../assets/Data.js'
+import {Plants,Pots} from '../assets/Data.js'
 import styled from 'styled-components';
 import ProductElement from '../components/ProductElement'
 import FilterElement from '../components/FilterElement.js';
@@ -21,9 +21,6 @@ margin : 20px;
 
 }
 `
-const SubFilter = styled.div`
-
-`
 
 const List = styled.ul`
 margin :  10px;
@@ -35,9 +32,14 @@ flex-wrap : wrap ;
 
 function Products() {
   const {product} = useParams()
-  const item = navBarItems.filter(i => i.name.toLowerCase()==product.toLowerCase())[0]
+  const item = (product == "plants") ? Plants : Pots ; 
   const [subFilter,setsubFilter]=useState(null);
   const [criteria,setcriteria]=useState(null);
+  const [products,setproducts]=useState(item.products);
+  useEffect(() => {
+
+  }, [criteria]);
+  
   return (
 
 <Plantspage>
@@ -58,7 +60,7 @@ function Products() {
   <FilterBarre  >
    { subFilter.map((element,index) => 
     index>0 &&
-    <div  key= {element[0]}  onClick={()=> setcriteria(element[0]) } >
+    <div  key= {element[0]}  onClick={()=> setproducts(item.products.filter(p => ( p.description.includes(element[0]))) ) (products)} >
     <FilterElement item={element} sub={true} />
     </div>
    )}
@@ -68,19 +70,8 @@ function Products() {
 
   
  <List>
-    { criteria==null ? 
-      item.products.map((p) => 
-        <ProductElement product={p} key={p.id} />
-        
-        )
-        : 
-        item.products.filter(p => ( p.description.includes(criteria))).map((p) => 
-        <ProductElement product={p} key={p.id} />
-        )
-
-        
- 
-    }
+     { products.map((p) => 
+      <ProductElement element={p} key={p.name + p.id} />)}
   </List> 
 
 </Plantspage>

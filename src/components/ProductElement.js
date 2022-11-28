@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 
 const Item = styled.li `
 width : 250px;
@@ -30,15 +30,16 @@ padding :5px;
 `
 
 
-function ProductElement( {product} ) {
+function ProductElement( {element} ) {
   const navigate = useNavigate();
   return (
       <Item  >
-      <ItemImage src ={product.image} alt={product.image} />
-      <p> {product.name} </p>
-      <p> {product.price} </p>
-      <View onClick={() => { navigate(`` );
-              }} >
+      <ItemImage src ={element.image[0]} alt={element.name} />
+      <p> {element.name} </p>
+      <p> {element.price} </p>
+
+      <View  onClick={() => { navigate(`${element.name.toLowerCase() }/${element.id}`); }} >
+      
       <p>View product </p> 
       </View>
       

@@ -12,7 +12,9 @@ background-color:#dbd4c8;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px 2em;
   width: 100%;
-  position: absolute;
+  bottom : 0;
+  margin-top :50px;
+
 `
 function Footer() {
   return (

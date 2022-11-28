@@ -7,7 +7,8 @@
   body , html {
     height: 100%;
     margin:0;
-    width: 100%;    
+    width: 100%; 
+     
 }
   /*  --------------Header----------------*/
   .header {
@@ -52,16 +53,20 @@
 .item:hover {
   border-bottom: black solid 2px ; 
   font-size:18px;
+  color: black;
 }
 
 .icons{
   margin-right: 20px;
-  width:90px ;
+  width: 100px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
+.icon {
+  cursor: pointer;
+}
 
 .menu-icon {
   display: none;
@@ -76,7 +81,6 @@
   left: 0;
   width: 40%;
   z-index: 99;
-
   background-color:  #dbd4c8;
   border-radius: 0 20px 20px 0;
   
@@ -152,6 +156,12 @@ color: white;
 
 }
 
+footer ul li :hover {
+  list-style: none;
+  color: white;
+  
+  
+  }
 
 footer ul li:first-child
 {
@@ -163,4 +173,3 @@ footer a {
   text-decoration: none;
   color: white;
 }
-

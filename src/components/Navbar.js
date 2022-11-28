@@ -10,7 +10,7 @@ function Navbar( {nameclass}) {
 
    <ul className={nameclass} >
    { navBarItems.map((item)=>
-    <Link to={(`/${item.name.toLowerCase().replace(/ /g, "") }`)  }   className="item" key={item.name} > {item.name} </Link>
+    <Link to={(`/${item.toLowerCase().replace(/ /g, "") }`)  }   className="item" key={item} > {item} </Link>
    
    )}
 
