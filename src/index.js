@@ -6,6 +6,7 @@ import {BrowserRouter as Router , Route , Routes } from 'react-router-dom'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import Products from './pages/Products.js'
+import Product from './pages/Product.js'
 import PlantCare from './pages/PlantCare.js'
 import Gifts from './pages/Gifts.js'
 import Tip from './pages/Tip.js'
@@ -17,11 +18,20 @@ root.render(
     <Router>
        <Header/>
     <Routes>
-    <Route path="/" element={<Home/>}    />
-    <Route path="/:product" element={<Products/>}    />
-    <Route path="/plantcare" element={<PlantCare/>}    />
+    <Route path="/" element={<Home/>}/>
+    
+    <Route path="/:product">
+       <Route path=""    element={<Products/>} />
+       <Route path=":name/:id" element={<Product/>}    />
+    </Route>
+    
+    
+    <Route path="/plantcare">
+       <Route path="" element={<PlantCare/>}/>
+       <Route path=":tip/:id" element={<Tip/>} />
+    </Route>
+
     <Route path="/gifts" element={<Gifts/>}    />
-    <Route path=":tip/:id" element={<Tip/>} />&
 
     </Routes>
     <Footer/>

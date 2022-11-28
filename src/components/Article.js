@@ -78,7 +78,7 @@ function Article({article,index}) {
     <Description>
          <Title>{article.title} </Title>
          <Text>{article.introduction}</Text>
-         <LinkB to='/' couleur={article.linkcolor} >{article.linktext}</LinkB>
+         <LinkB onClick={() => { navigate(`/plantcare/${article.name}/${article.id}`); }}  couleur={article.linkcolor} >{article.linktext}</LinkB>
      </Description>
       </Element> )
     :

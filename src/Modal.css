@@ -211,7 +211,7 @@
   display: flex;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1px);
-  z-index: 0;
+  z-index: 10;
   
  
 }

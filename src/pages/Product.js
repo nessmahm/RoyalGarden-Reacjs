@@ -11,9 +11,10 @@ const Container = styled.div`
 `;
 
 const ImgContainer = styled.div`
-width:60%;
+max-width:60%;
 display:flex;
 flex-direction : column;
+height:100%
 `;
 
 const MainImg = styled.div `
@@ -34,11 +35,13 @@ flex-wrap : wrap;
 const OtherImg=styled.img`
 object-fit:cover ; 
 width: 30%;
+margin:3px;
 
 
 `;
 const Details = styled.div`
-  padding-left: 50px;
+  padding-left: 5%;
+  width:50%;
 `;
 const Name = styled.h1` 
  font-weight: Bold;

@@ -36,9 +36,10 @@ function Products() {
   const [subFilter,setsubFilter]=useState(null);
   const [criteria,setcriteria]=useState(null);
   const [products,setproducts]=useState(item.products);
-  useEffect(() => {
 
-  }, [criteria]);
+  console.log(item)
+  useEffect(() => {
+  }, [item,product]);
   
   return (
 
@@ -60,7 +61,7 @@ function Products() {
   <FilterBarre  >
    { subFilter.map((element,index) => 
     index>0 &&
-    <div  key= {element[0]}  onClick={()=> setproducts(item.products.filter(p => ( p.description.includes(element[0]))) ) (products)} >
+    <div  key= {element[0]}  onClick={()=> setproducts(item.products.filter(p => ( p.description.includes(element[0]))) )  } >
     <FilterElement item={element} sub={true} />
     </div>
    )}
@@ -70,7 +71,7 @@ function Products() {
 
   
  <List>
-     { products.map((p) => 
+     { products && products.map((p) => 
       <ProductElement element={p} key={p.name + p.id} />)}
   </List> 
 

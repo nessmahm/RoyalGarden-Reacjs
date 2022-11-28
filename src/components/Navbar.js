@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom'
 import {navBarItems} from '../assets/Data'
 import greenhouse from '../assets/Images/greenhouse.png'
 import styled from 'styled-components'
+import { useNavigate } from "react-router-dom";
 
 function Navbar( {nameclass}) {
+  const navigate = useNavigate();
 
   return (
 
    <ul className={nameclass} >
    { navBarItems.map((item)=>
-    <Link to={(`/${item.toLowerCase().replace(/ /g, "") }`)  }   className="item" key={item} > {item} </Link>
-   
+    <a onClick={() => { navigate(`/${item.toLowerCase().replace(/ /g, "") }`)  ; }}   className="item" key={item} > {item} </a>
+
    )}
 
     { nameclass=="item-list2" && (
