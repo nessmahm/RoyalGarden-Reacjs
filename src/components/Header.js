@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import NavbarModal from './NavbarModal'
 import logo from '../assets/Images/RoyalGarden.png';
 import {FaSearch} from 'react-icons/fa'
 import {RiShoppingCartFill} from 'react-icons/ri'
@@ -36,7 +37,8 @@ function Header() {
    <Logo to="/"><img src={logo} className="logo"/></Logo>
     
     
-    <Navbar  nameclass = {menu   ? "item-list2" : "item-list" } />
+    <Navbar/>
+    {menu && <NavbarModal/> }
   
 
     <div className="icons">

@@ -6,14 +6,16 @@ import {AiFillInstagram} from 'react-icons/ai'
 import {IoLogoWhatsapp} from 'react-icons/io'
 
 const FooterX=styled.footer `
-background-color:#dbd4c8;
-  height: 200px;
+  background-color:#dbd4c8;
+  height: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px 2em;
   width: 100%;
   bottom : 0;
-  margin-top :50px;
+  justify-content:center;
+  align-items:center;
+
 
 `
 function Footer() {

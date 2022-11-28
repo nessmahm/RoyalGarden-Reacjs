@@ -23,7 +23,7 @@
 }
 
 .logo{
-    margin-top: -15px;
+    margin-top: -17px;
     margin-left:90px;
     width: 150px;
     cursor: pointer;   
@@ -35,9 +35,8 @@
   display: flex;
   width: 50%;
   align-items: center ;
+  margin-bottom: 0px;
   margin-left : -10%;
-
-
 }
 
 .item {
@@ -62,6 +61,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .icon {
@@ -81,7 +81,7 @@
   left: 0;
   width: 40%;
   z-index: 99;
-  background-color:  #dbd4c8;
+  background-color: rgb(247, 241, 241);
   border-radius: 0 20px 20px 0;
   
     
@@ -137,15 +137,15 @@
 
 
 footer{
-  
-
+  width:100%;
 
 
 } 
 
 footer ul 
 {
-margin : 50px;
+margin : auto;
+
 }
 
 
@@ -153,7 +153,8 @@ footer ul li {
 list-style: none;
 color: white;
 
-
+  font-weight: 500;
+  font-size: 20px;
 }
 
 footer ul li :hover {
@@ -161,11 +162,14 @@ footer ul li :hover {
   color: white;
   
   
+  
   }
 
 footer ul li:first-child
 {
-  font-weight: bold ;
+  font-weight: 900 ;
+  font-size: 25px;
+
 }
 
 
