@@ -1,10 +1,11 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Element = styled.div`
  display : flex; 
+ min-height:500px;
+ min-height:600px;
  background-color: ${props=>props.couleur || "white "};
  margin-bottom:50px;
 
@@ -29,7 +30,7 @@ const Plantimg = styled.img `
   width: 100%;
   height: 100%;
   object-fit : cover ;
-}
+
 
 `
 const Description = styled.div `
@@ -43,23 +44,32 @@ margin : 30px;
 
 `
 const Title = styled.h1`
-color :black;
-`
+    font-family: "Untitled Serif",Georgia,Moderat,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #313232;
+    text-rendering: optimizeLegibility;`
+    
 const Text = styled.p`
-color :black;
-font-size:18px;
-
+    color :black;
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
 `
 
- 
-const LinkB = styled.a`
+const Link = styled.div`
 
+`
+const LinkB = styled.a`
+padding:10px;
 &:hover{
 cursor: pointer;
+padding:0px;
 color : ${props=>props.couleur || "white "} ;
 font-size:18px;
 } 
-
+fony-weight:bold;
 color : ${props=>props.couleur || "white "}
 `
 function Article({article,index}) {
@@ -86,7 +96,9 @@ function Article({article,index}) {
     <Description>
          <Title>{article.title} </Title>
          <Text>{article.introduction}</Text>
+         <Link>
          <LinkB onClick={() => { navigate(`/plantcare/${article.name}/${article.id}`); }}  couleur={article.linkcolor} >{article.linktext}</LinkB>
+         </Link>
      </Description> 
      <ImageContainer>
     <Plantimg src={article.image} alt="plant-image"/>

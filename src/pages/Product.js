@@ -2,7 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import {Plants,Pots} from '../assets/Data.js'
-import { useState } from "react";
+import { useState,useEffect ,useContext} from "react";
+import {CountProductsContext} from '../utils/CountContext'
 
 const Container = styled.div`
   display : flex; 
@@ -44,17 +45,25 @@ const Details = styled.div`
   width:50%;
 `;
 const Name = styled.h1` 
- font-weight: Bold;
- 
+   font-weight: 900;
+    line-height: 1.215;
+    margin-top: 0;
+    color: #313232;
+    font-family: "Untitled Serif",Georgia,Moderat,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
 `;
 const Price = styled.span`
 font-weight: 100;
 font-size: 25px;
-margin: 20px 0px;
+font-weight: 500;
+font-family: "Untitled Serif",Georgia,Moderat,Helvetica Neue,Helvetica,Arial,sans-serif;
+font-style: normal;
+color: #313232;
+
 `
 const FilterContainer = styled.div`
   width: 50%;
-  margin: 30px 0px;
+  margin: 10px 0px;
   display: flex;
   justify-content: space-between;
 `;
@@ -65,7 +74,9 @@ const Filter = styled.div`
 
 const FilterTitle = styled.span`
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 500;
+  width:75px;
+
 `;
 
 const FilterColor = styled.div`
@@ -83,7 +94,7 @@ const FilterSize = styled.select`
 `;
 const HeightContainer = styled.div`
 display:flex;
-
+flex-wrap: no-wrap;
 
 `;
 
@@ -91,6 +102,7 @@ const HeightElements = styled.div `
 border : solid 1px beige ; 
 margin:10px;
 width:30px;
+font-weight:500;
 text-align:center;
 &:hover{
       background-color: #f8f4f4;
@@ -107,10 +119,11 @@ const AmountContainer = styled.div`
   align-items: center;
   font-weight: 700;
   width:100%;
+  
 `;
 
 const Amount = styled.span`
-  width: 30px;
+  width: 50px;
   height: 30px;
   border-radius: 10px;
   border: 1px solid teal;
@@ -123,6 +136,7 @@ const Remove = styled.span`
 font-size:40px;
 font-weight: 700;
 padding-right:5px;
+padding-bottom:9px;
 cursor:pointer;
 
 
@@ -133,17 +147,21 @@ font-size:35px;
 font-weight: 700;
 padding:5px;
 cursor:pointer;
+padding-bottom:9px;
+
 `;
 
 const Button = styled.button`
   padding: 15px;
-  border: 2px solid teal;
-  background-color: white;
+  border: 2px solid white ;
+  background-color: teal ;
+  color:white;
   cursor: pointer;
+  width:100%;
   font-weight: 500;
 
   &:hover{
-      background-color: #f8f4f4;
+    background-color: #4c9d96;
   }
 `;
 function Product() {
@@ -151,8 +169,13 @@ function Product() {
   const item = (product == "plants") ? Plants : Pots ; 
   const element = item.products.filter(i =>i.name.toLocaleLowerCase()==name && i.id==id )[0]
   const [images, setImages] = useState(element.image)
-  console.log(images)
-  return (
+  const [count, setcount] = useState(1)
+  useEffect(() => {
+  });
+  const {countProducts,setcountProducts} = useContext(CountProductsContext);
+
+  
+return (
 <Container>
     <ImgContainer>
       <MainImg>
@@ -172,7 +195,7 @@ function Product() {
         {product=="pots" ?
        (<FilterContainer>
         <Filter>
-              <FilterTitle>Color</FilterTitle>
+              <FilterTitle>Color :</FilterTitle>
               {element.colors.map((c)=>
               <FilterColor key={c} color={c[0]} onClick = {()=> setImages(c[1])}/>
               )}
@@ -181,7 +204,7 @@ function Product() {
         
         <Filter>
               
-              <FilterTitle>height</FilterTitle>
+              <FilterTitle>heights : </FilterTitle>
               <FilterSize>
               {element.sizes.map((s)=>
 
@@ -198,7 +221,7 @@ function Product() {
         
           <Filter>
               
-              <FilterTitle>Height</FilterTitle>
+              <FilterTitle>Height :</FilterTitle>
               <HeightContainer>
               {element.height.map((h)=>
 
@@ -212,11 +235,11 @@ function Product() {
         }
         <AddContainer>
             <AmountContainer>
-              <Remove>-</Remove>
-              <Amount>1</Amount>
-              <Add>+</Add>
+              <Remove onClick={  ()=> count>0 ? setcount(count-1) : true}>-</Remove>
+              <Amount>{count}</Amount>
+              <Add onClick={ ()=> setcount(count+1) } >+</Add>
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={()=> setcountProducts(countProducts+count)  }>ADD TO CART</Button>
           </AddContainer>
      </Details> 
 </Container>

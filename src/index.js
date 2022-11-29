@@ -12,10 +12,13 @@ import Gifts from './pages/Gifts.js'
 import Tip from './pages/Tip.js'
 import './style.css';
 import Home from './pages/Home'
+import { CountProductsProvider } from './utils/CountContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+    <CountProductsProvider>
        <Header/>
     <Routes>
     <Route path="/" element={<Home/>}/>
@@ -35,6 +38,8 @@ root.render(
 
     </Routes>
     <Footer/>
+    </CountProductsProvider>
+
     </Router>
   </React.StrictMode>
 );

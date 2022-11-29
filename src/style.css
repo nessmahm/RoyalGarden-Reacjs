@@ -133,6 +133,28 @@
 
 }
 
+.Basket {
+  display: flex;
+  
+}
+.Badge{
+  background-color: teal;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px; 
+  margin-left: 10px;
+  margin-top: -12px;
+
+}
+.Badge p {
+
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+
+}
+
   /*  --------------Footer----------------*/
 
 

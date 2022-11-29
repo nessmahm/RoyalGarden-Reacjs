@@ -12,7 +12,13 @@
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1px);
+  transform: translateY(0);
+  transition: var(--speed) ease;
+
 }
+
+
+
 
 .modalBackground .modalContainer {
   top:70px;
@@ -24,6 +30,7 @@
   display: flex;
   flex-direction: column;
   padding: 25px;
+    
 }
 
 .modalBackground .modalContainer .title {
@@ -212,8 +219,8 @@
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1px);
   z-index: 10;
+
   
- 
 }
 .SearchmodalBackground .modalContainer {
   width: 100%;
