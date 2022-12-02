@@ -176,7 +176,8 @@ function Product() {
 
   
 return (
-<Container>
+<Container  className='page-container'>
+
     <ImgContainer>
       <MainImg>
         <ProductImg src={images[0]}/>

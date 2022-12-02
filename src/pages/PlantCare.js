@@ -9,7 +9,7 @@ const Container = styled.div `
 
 export default function Plantcare() {
   return (
-<Container>
+<Container className='page-container'>
 {Tips.articles.map((element,index)=>
 <Article article={element} index={index} key={element.id} />
 

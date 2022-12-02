@@ -6,9 +6,6 @@ import ProductElement from '../components/ProductElement'
 import FilterElement from '../components/FilterElement.js';
 import { useParams } from 'react-router-dom'
 
-const Plantspage = styled.div`
-
-`
 
 const FilterBarre  = styled.div `
 display : flex ; 
@@ -43,7 +40,7 @@ function Products() {
   
   return (
 
-<Plantspage>
+<div className='page-container'>
       
 
 
@@ -75,7 +72,7 @@ function Products() {
       <ProductElement element={p} key={p.name + p.id} />)}
   </List> 
 
-</Plantspage>
+</div>
 
     )
 }

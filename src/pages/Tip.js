@@ -3,10 +3,6 @@ import { useParams } from 'react-router-dom'
 import {Tips} from '../assets/Data.js'
 import styled from 'styled-components'
 
-const Container = styled.div`
-
-`
-
 
 const Introduction =styled.div`
 width:100%;
@@ -104,9 +100,8 @@ margin-bottom:15px;
 function Tip() {
   const {tip,id} = useParams()
   const article = Tips.articles.filter((t) => t.id==id )[0]
-  console.log(article.content)
  return (
-<Container>
+<div className='page-container'>
 <Introduction>
    <Bande>
     <IntroImg src={article.image}/>
@@ -140,7 +135,7 @@ function Tip() {
   
 </ArticlContainer>
 
-</Container>
+</div>
 
 
     )

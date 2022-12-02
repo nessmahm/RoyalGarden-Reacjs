@@ -2,7 +2,8 @@ import React from 'react'
 
 function Gifts() {
   return (
-    <div>Gifts</div>
+    <div className='page-container'>
+    Gifts</div>
   )
 }
 

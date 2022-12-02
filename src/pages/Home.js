@@ -59,7 +59,8 @@ color : ${props=>props.couleur || "white "}
 function Home() {
   return (
 
-    <Container>
+    <Container  className='page-container'>
+
 
   
 
