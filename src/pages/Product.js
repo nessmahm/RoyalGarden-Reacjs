@@ -76,7 +76,8 @@ const FilterTitle = styled.span`
   font-weight: 500;
   width:75px;
   height:35px;
-
+  text-align: center;
+  
 `;
 
 const FilterColor = styled.div`
@@ -91,16 +92,20 @@ const FilterColor = styled.div`
 const FilterSize = styled.select`
   margin-left: 10px;
   padding: 5px;
+
+
 `;
 const HeightContainer = styled.div`
 display:flex;
 flex-wrap: no-wrap;
+Height:30px;
+
 
 `;
 
 const HeightElements = styled.div `
 border : solid 1px beige ; 
-margin:10px;
+margin: 0 10px;
 width:30px;
 font-weight:500;
 text-align:center;
@@ -109,7 +114,8 @@ text-align:center;
   }
 
 `
-const FilterSizeOption = styled.option``;
+const FilterSizeOption = styled.option`
+`;
 
 const AddContainer = styled.div`
 `;
@@ -206,7 +212,7 @@ return (
         
         <Filter>
               
-              <FilterTitle>height : </FilterTitle>
+              <FilterTitle>Height : </FilterTitle>
               <FilterSize>
               {element.sizes.map((s)=>
 
