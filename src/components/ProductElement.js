@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import { fontFamily } from '@mui/system';
-
+import '../utils/styles/button.css'
+import {AiOutlineDoubleRight} from 'react-icons/ai'
 const Item = styled.li `
 width : 250px;
 height: 350px;
-color : #1E4B2D;
-border-bottom : 2px solid #0B9446;
+color : teal;
+border-bottom : 2px solid teal;
 display:flex;
 flex-direction:column;
 list-style: none;
@@ -44,16 +43,6 @@ const Price = styled.p `
 
     `;
 
-const View = styled.p`
-height : 30px;
-weidth : 100%;
-font-weight: 700;
-background-color : #1E4B2D ;
-cursor:pointer;
-color : white;
-padding-left:20px;
-border-radius: 30px;`
-
 
 function ProductElement( {element} ) {
   const navigate = useNavigate();
@@ -63,7 +52,11 @@ function ProductElement( {element} ) {
       <ItemImage src ={element.image[0]} alt={element.name} />
       <Title> {element.name} </Title>
       <Price> {element.price}$ </Price>
-      <View  onClick={() => { navigate(`${element.name.toLowerCase() }/${element.id}`); }}>View product </View>
+      <button className="ViewButton" onClick={() => { navigate(`${element.name.toLowerCase() }/${element.id}`); }}>
+          <span >View product </span>
+          <span>  <AiOutlineDoubleRight size={15} className="One" /> </span>
+
+      </button>
       
       </Item>
 

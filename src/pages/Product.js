@@ -8,7 +8,6 @@ import {CountProductsContext} from '../utils/CountContext'
 const Container = styled.div`
   display : flex; 
   margin : 50px 100px ;  
-
 `;
 
 const ImgContainer = styled.div`
@@ -162,6 +161,7 @@ const Button = styled.button`
 
   &:hover{
     background-color: #4c9d96;
+    font-size :18px;
   }
 `;
 function Product() {

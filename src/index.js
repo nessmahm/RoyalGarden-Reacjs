@@ -10,7 +10,7 @@ import Product from './pages/Product.js'
 import PlantCare from './pages/PlantCare.js'
 import Gifts from './pages/Gifts.js'
 import Tip from './pages/Tip.js'
-import './style.css';
+import './utils/styles/style.css';
 import Home from './pages/Home'
 import { CountProductsProvider } from './utils/CountContext';
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {HiOutlineArrowRight} from 'react-icons/hi'
 import { IconContext } from "react-icons";
 import flower from "../assets/Images/flower.webp"
-import "../Modal.css"
+import "../utils/styles/Modal.css"
 function Basket({setBasketModalOpen}) {
   return (
   <div className="BasketmodalBackground">
