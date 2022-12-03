@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
-import '../utils/styles/button.css'
 import {AiOutlineDoubleRight} from 'react-icons/ai'
 const Item = styled.li `
 width : 250px;

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../utils/styles/style.css';
 import Form from 'react-bootstrap/Form';
 import {AiFillCloseCircle} from 'react-icons/ai'
 import { IconContext } from "react-icons";

@@ -7,7 +7,7 @@ import {CountProductsContext} from '../utils/CountContext'
 
 const Container = styled.div`
   display : flex; 
-  margin : 50px 100px ;  
+  margin : 120px 10% 50px 10%;  
 `;
 
 const ImgContainer = styled.div`
@@ -61,20 +61,21 @@ color: #313232;
 
 `
 const FilterContainer = styled.div`
-  width: 50%;
   margin: 10px 0px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 `;
 const Filter = styled.div`
   display: flex;
-  align-items: center;
-`;
+  flex-wrap: nowrap;
+  margin-top : 10px;
+  `
 
 const FilterTitle = styled.span`
   font-size: 20px;
   font-weight: 500;
   width:75px;
+  height:35px;
 
 `;
 
@@ -176,7 +177,7 @@ function Product() {
 
   
 return (
-<Container  className='page-container'>
+<Container >
 
     <ImgContainer>
       <MainImg>
@@ -205,7 +206,7 @@ return (
         
         <Filter>
               
-              <FilterTitle>heights : </FilterTitle>
+              <FilterTitle>height : </FilterTitle>
               <FilterSize>
               {element.sizes.map((s)=>
 
