@@ -1,0 +1,286 @@
+
+
+/* ---------- login / Register MODAL ---------------- */
+.modalBackground {
+  top:0px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  transform: translateY(0);
+  transition: var(--speed) ease;
+
+}
+
+
+
+
+.modalBackground .modalContainer {
+  top:70px;
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+    
+}
+
+.modalBackground .modalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modalBackground .modalContainer .titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.modalBackground .modalContainer .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
+
+.modalBackground .modalContainer .footer .login {
+  width: 90%;
+  margin:10px;
+  height: 45px;
+  
+  background-color: white;
+  border: solid 3px #A07050 ;
+  color: #A07050  ;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalBackground .modalContainer input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  border: 0.15em solid #A07050;
+  outline: none;
+  cursor: pointer;
+}
+.modalBackground .modalContainer input[type="checkbox"]:checked:before {
+  font-size: 1.5em;
+  color: #fff;
+  position: absolute;
+  right: 1px;
+  top: -5px;
+}
+
+.modalBackground .modalContainer input[type="checkbox"]:checked {
+  background-color: #A07050;
+  position: relative;
+}
+
+.modalBackground .modalContainer input[type="checkbox"]:disabled {
+  border-color: #c0c0c0;
+  background-color: #c0c0c0;
+}
+
+.modalBackground .modalContainer input[type="checkbox"]:focus {
+  box-shadow: 0 0 20px #A07050;
+}
+
+.modalBackground .modalContainer .footer a {
+  margin: 10px;
+}
+.modalBackground .modalContainer .footer  .forgotpassword {
+  color: #5e5e5e;
+}
+.modalBackground .modalContainer .footer  .newAccount {
+  color: #A07050;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+
+/* ---------- Basket MODAL ---------------- */
+.BasketmodalBackground {
+    top:0px;
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+  }
+  
+  .BasketmodalBackground .modalContainer {
+    width: 500px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding :30px;
+  }
+  
+  .BasketmodalBackground .titleCloseBtn {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 5%;
+    margin-bottom: 10px;
+  }
+  
+  .BasketmodalBackground .title {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif; 
+  color :#A07050;
+  }
+  
+  .BasketmodalBackground .elements {
+    display: flex;
+    flex-direction:column;
+    height: 200px; 
+    border-bottom: solid #cfa081 2px;
+    padding:10px;
+  }
+  
+  .BasketmodalBackground .itemi {
+    display: flex;
+   
+  }
+  .BasketmodalBackground .itemi .itemimage {
+   max-height: 130px;
+   object-fit:cover ; 
+   
+  }
+  
+  .BasketmodalBackground .description {
+    padding-left:30px;
+  
+  }
+  
+  .BasketmodalBackground .item-title {
+    font-weight: 600;
+    color:darkgray;
+    font-family:'Times New Roman', Times, serif ;
+  }
+  .continueshooping{
+    color: #5e5e5e;
+    cursor: pointer;
+
+  }
+  .bag{
+    width: 90%;
+    margin:10px;
+    height: 45px;
+    
+    background-color: white;
+    border: solid 3px #A07050 ;
+    color: #A07050  ;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .BasketmodalBackground .footer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/*----------Search Bar-----------------*/
+
+.SearchmodalBackground{
+  top:70px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  z-index: 10;
+
+  
+}
+.SearchmodalBackground .modalContainer {
+  width: 100%;
+  height: 300px;
+  border-radius: 0 0 12px 12px;
+  background-color: rgb(247, 241, 241);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+.el {
+  width: 60%;
+}
+.searchInputs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  
+
+}
+
+.SearchmodalBackground input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 100%;
+}
+
+.searchIcon {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+.SearchmodalBackground input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+.results {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+
+}
+.results li {
+list-style-type: none;
+color :#A07050;
+}
+.results ul {
+  font-size: 15px;
+  font-weight: 600;
+}
