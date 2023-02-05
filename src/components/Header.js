@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import NavbarModal from './NavbarModal'
+import NavbarModal from '../modal/NavbarModal'
 import logo from '../assets/Images/RoyalGarden.png';
 import {FaSearch} from 'react-icons/fa'
 import {FaShoppingBag} from 'react-icons/fa'
@@ -10,10 +10,10 @@ import {FaUserAlt} from 'react-icons/fa'
 import { useState ,useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import LoginModal from './LoginModal';
-import RegisterModal from './RegisterModal';
-import BasketModal from './BasketModal';
-import SearchModal from './SearchModal';
+import LoginModal from '../modal/LoginModal';
+import RegisterModal from '../modal/RegisterModal';
+import BasketModal from '../modal/BasketModal';
+import SearchModal from '../modal/SearchModal';
 import {CountProductsContext} from '../utils/CountContext'
 const Logo = styled(Link)`
 
