@@ -5,16 +5,14 @@ import greenhouse from '../assets/Images/greenhouse.png'
 import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
 
-function NavbarModal( {nameclass}) {
+function NavbarModal() {
   const navigate = useNavigate();
 
   return (
 
-   <ul className="item-list2" >
+   <ul className="item-list item-list2" >
    { navBarItems.map((item)=>
-    <a onClick={() => { navigate(`/${item.toLowerCase().replace(/ /g, "") }`)  ; }}   className="item" key={item} > {item} </a>
-
-   )}
+    <a href={'/'+ item.toLowerCase().replace(/ /g, "") }   className="item" key={item} > <span>{item}</span> </a>   )}
 
       <div className="logo-list2">
         <img src={greenhouse} alt="img"  />

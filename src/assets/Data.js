@@ -170,7 +170,8 @@ export const Tips = {
       ],
   linktext :"Read More",
   bg : "#faf7f2",
-  linkcolor : "#856e51"
+  linkcolor : "#856e51",
+  imgpath:"../assets/Images/plant1.webp"
 }
 ,{
   title: "How to Keep Potted Plants Alive : ", 
@@ -209,7 +210,9 @@ export const Tips = {
   ] ,
   linktext :"Here",
   bg : "#f0f6fb",
-  linkcolor : "#7f7d7a"
+  linkcolor : "#7f7d7a",
+  imgpath:"../assets/Images/plant2.webp"
+
 }]
 }
 

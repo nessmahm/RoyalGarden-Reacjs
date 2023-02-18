@@ -167,8 +167,8 @@ const Button = styled.button`
   font-weight: 500;
 
   &:hover{
-    background-color: #4c9d96;
-    font-size :18px;
+    opacity : 80%;
+    transform: scale(1.09);
   }
 `;
 function Product() {

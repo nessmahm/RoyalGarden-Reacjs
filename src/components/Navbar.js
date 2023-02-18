@@ -12,9 +12,7 @@ function Navbar( ) {
 
    <ul className="item-list" >
    { navBarItems.map((item)=>
-    <a onClick={() => { navigate(`/${item.toLowerCase().replace(/ /g, "") }`)  ; }}   className="item" key={item} > {item} </a>
-
-   )}
+    <a href={'/'+ item.toLowerCase().replace(/ /g, "") }   className="item"  key={item} > <span>{item}</span> </a>   )}
    </ul>
   
 

@@ -4,7 +4,7 @@ import Article from '../components/Article.js'
 import {Tips} from '../assets/Data.js'
 const Container = styled.div `
  display: grid;
-  grid-template-columns: auto;
+ grid-template-columns: auto;
   `
 
 export default function Plantcare() {

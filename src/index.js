@@ -12,6 +12,8 @@ import Gifts from './pages/Gifts.js'
 import Tip from './pages/Tip.js'
 import './utils/styles/style.css';
 import './utils/styles/modal.css';
+import './utils/styles/article.css';
+import './utils/styles/product.css';
 import Home from './pages/Home'
 import { CountProductsProvider } from './utils/CountContext';
 

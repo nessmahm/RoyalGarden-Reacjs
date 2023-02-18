@@ -19,6 +19,7 @@ const Logo = styled(Link)`
 
 `
 
+
 function Header() {
   const [menu,setMenu]=useState(false);
   const handleMenu =  () => setMenu(!menu);
@@ -28,14 +29,23 @@ function Header() {
   const [SearchmodalOpen, setSearchModalOpen] = useState(false);
   const {countProducts} = useContext(CountProductsContext);
 
+  function closeAllModels () {
+     if (loginnmodalOpen) setLoginModalOpen(false);
+      if (BasketmodalOpen ) setBasketModalOpen(false);
+      if(RegisterModal) setRegisterModalOpen(false);
+      if(SearchModal) setSearchModalOpen(false);
+      if(menu) setMenu(false);
+}
+
   return (
     <div className="header">
 
     <IconContext.Provider value={{ className : "menu-icon" , size : "29px" }}>
   
-    <CgMenuOreos  onClick={handleMenu} />
+    <CgMenuOreos  onClick={ () =>  closeAllModels() || handleMenu() } />
     
     </IconContext.Provider>
+    
    <Logo to="/"><img src={logo} className="logo"/></Logo>
     
     
@@ -46,22 +56,23 @@ function Header() {
     <div className="icons">
     <IconContext.Provider value={{size : "22px" }}>
     <FaSearch className="icon" onClick={() => {
-          setSearchModalOpen(!SearchmodalOpen);} }/>
+         closeAllModels() || setSearchModalOpen(!SearchmodalOpen);} }/>
    
     <div className="Basket">
     <div className="Badge"><p>{countProducts}</p></div>
     <FaShoppingBag className="icon"  onClick={() => {
-          setBasketModalOpen(true);} }  />
+          closeAllModels() || setBasketModalOpen(true);} }  />
    </div>
    
     <FaUserAlt className="icon"  onClick={() => {
-          setLoginModalOpen(true);} } />
+         closeAllModels() || setLoginModalOpen(true);} } />
     </IconContext.Provider>
     </div>
     {loginnmodalOpen && <LoginModal  setLoginModalOpen={setLoginModalOpen} setRegisterModalOpen={setRegisterModalOpen} />}
     {RegistermodalOpen && <RegisterModal setRegisterModalOpen={setRegisterModalOpen} />}
     {BasketmodalOpen && <BasketModal setBasketModalOpen={setBasketModalOpen} /> }
     {SearchmodalOpen && <SearchModal setSearchModalOpen={setSearchModalOpen} /> }
+
     </div>
     
     
