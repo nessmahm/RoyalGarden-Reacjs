@@ -187,7 +187,7 @@ return (
 
     <ImgContainer>
       <div>
-        <ProductImg src={images[0]} alt={"img-"+element.name} />
+        <img src={images[0]} alt={"img-"+element.name} />
       </div>
       
       <Other>
