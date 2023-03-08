@@ -98,4 +98,8 @@ margin:10px;
   .ViewButton:hover span:nth-child(2) {
     opacity:1;
   }
-  
+   .main-img img {
+    width:100%;
+    max-height:500px;
+    object-fit: cover;
+  }

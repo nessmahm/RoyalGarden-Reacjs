@@ -17,15 +17,6 @@ flex-direction : column;
 height:100%
 `;
 
-const MainImg = styled.div `
-
-`;
-
-const ProductImg = styled.img`
-  width:100%;
-  max-height:500px;
-  object-fit: cover;
-`;
 
 
 const Other = styled.div `
@@ -36,7 +27,6 @@ const OtherImg=styled.img`
 object-fit:cover ; 
 width: 30%;
 margin:3px;
-
 
 `;
 const Details = styled.div`
@@ -184,15 +174,16 @@ function Product() {
   
 return (
 <Container >
+<img src={images[0]} alt={element.name} />
 
     <ImgContainer>
-      <div>
+      <div className="main-img" >
         <img src={images[0]} alt={"img-"+element.name} />
       </div>
       
       <Other>
       { images.map((i)=>
-      <OtherImg  src={i} key={i} alt={"img-"+element.name}  />
+      <OtherImg  src={i} key={i}  />
       )}
       </Other>
 
