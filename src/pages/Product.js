@@ -179,7 +179,7 @@ return (
 
     <ImgContainer>
       <div className="main-img" >
-        <img src={element.image[0]} alt={element.name}  />
+        <img src={"../../"+element.image[0]} alt={element.name}  />
       </div>
       
       <Other>
