@@ -7,14 +7,14 @@ function ProductElement( {element} ) {
   return (
       <div className='product-element plant'  >
      
-      <img src ={element.image[0]} alt={element.name} />
-      <h3 className="title"> {element.name} </h3>
-      <p className="price"> {element.price}$ </p>
-      <button className="ViewButton" onClick={() => { navigate(`${element.name.toLowerCase() }/${element.id}`); }}>
-          <span >View product </span>
-          <span>  <AiOutlineDoubleRight size={15} className="One" /> </span>
+        <img src ={element.image[0]} alt={element.name} />
+        <h3 className="title"> {element.name} </h3>
+        <p className="price"> {element.price}$ </p>
+        <button className="ViewButton" onClick={() => { navigate(`${element.name.toLowerCase() }/${element.id}`); }}>
+            <span >View product </span>
+            <span>  <AiOutlineDoubleRight size={15} className="One" /> </span>
 
-      </button>
+        </button>
       
       </div>
 

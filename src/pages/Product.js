@@ -19,6 +19,7 @@ height:100%
 
 
 
+
 const Other = styled.div `
 display : flex;
 flex-wrap : wrap;
@@ -27,6 +28,7 @@ const OtherImg=styled.img`
 object-fit:cover ; 
 width: 30%;
 margin:3px;
+
 
 `;
 const Details = styled.div`
@@ -174,22 +176,21 @@ function Product() {
   
 return (
 <Container >
-<img src={images[0]} alt={element.name} />
 
     <ImgContainer>
       <div className="main-img" >
-        <img src={images[0]} alt={"img-"+element.name} />
+        <img src={element.image[0]} alt={element.name}  />
       </div>
       
       <Other>
-      { images.map((i)=>
+      { element.image.map((i)=>
       <OtherImg  src={i} key={i}  />
       )}
       </Other>
 
     </ImgContainer>
      <Details>
-        <Name>{}</Name>
+        <Name>{element.Name}</Name>
         <Price>{element.price}$</Price>
         {product=="pots" ?
        (<FilterContainer>
