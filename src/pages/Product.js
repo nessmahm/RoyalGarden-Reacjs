@@ -179,12 +179,12 @@ return (
 
     <ImgContainer>
       <div className="main-img" >
-        <img src={"../../"+element.image[0]} alt={element.name}  />
+        <img src={images[0]} alt={element.name}  />
       </div>
       
       <Other>
       { element.image.map((i)=>
-      <OtherImg  src={i} key={i}  />
+      <OtherImg  src={"../../"+i} key={i}  />
       )}
       </Other>
 
