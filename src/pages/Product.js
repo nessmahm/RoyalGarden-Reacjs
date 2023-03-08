@@ -187,18 +187,18 @@ return (
 
     <ImgContainer>
       <MainImg>
-        <ProductImg src={images[0]}/>
+        <ProductImg src={images[0]} alt={"img-"+element.name} />
       </MainImg>
       
       <Other>
       { images.map((i)=>
-      <OtherImg  src={i} key={i} />
+      <OtherImg  src={i} key={i} alt={"img-"+element.name}  />
       )}
       </Other>
 
     </ImgContainer>
      <Details>
-        <Name>{element.name}</Name>
+        <Name>{}</Name>
         <Price>{element.price}$</Price>
         {product=="pots" ?
        (<FilterContainer>
