@@ -186,9 +186,9 @@ return (
 <Container >
 
     <ImgContainer>
-      <MainImg>
+      <div>
         <ProductImg src={images[0]} alt={"img-"+element.name} />
-      </MainImg>
+      </div>
       
       <Other>
       { images.map((i)=>
