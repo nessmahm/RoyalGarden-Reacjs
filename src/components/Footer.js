@@ -43,6 +43,7 @@ function Footer() {
 {/* ----- */}
 
 <ul className="SocialMedia">
+
 <li>Sicial medias</li>
 <li><IoLogoWhatsapp/></li>
 <li><AiFillInstagram/></li>

@@ -21,27 +21,27 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-    <CountProductsProvider>
-       <Header/>
-    <Routes>
-    <Route path="/" element={<Home/>}/>
-    
-    <Route path="/:product">
-       <Route path=""    element={<Products/>} />
-       <Route path=":name/:id" element={<Product/>}    />
-    </Route>
-    
-    
-    <Route path="/plantcare">
-       <Route path="" element={<PlantCare/>}/>
-       <Route path=":tip/:id" element={<Tip/>} />
-    </Route>
+      <CountProductsProvider>
+            <Header/>
+         <Routes>
+         <Route path="/" element={<Home/>}/>
+         
+         <Route path="/:product">
+            <Route path=""    element={<Products/>} />
+            <Route path=":name/:id" element={<Product/>}    />
+         </Route>
+         
+         
+         <Route path="/plantcare">
+            <Route path="" element={<PlantCare/>}/>
+            <Route path=":tip/:id" element={<Tip/>} />
+         </Route>
 
-    <Route path="/gifts" element={<Gifts/>}    />
+         <Route path="/gifts" element={<Gifts/>}    />
 
-    </Routes>
-    <Footer/>
-    </CountProductsProvider>
+         </Routes>
+         <Footer/>
+      </CountProductsProvider>
 
     </Router>
   </React.StrictMode>
