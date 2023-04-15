@@ -184,7 +184,7 @@ return (
       
       <Other>
       { element.image.map((i)=>
-      <OtherImg  src={i} key={i}  />
+      <OtherImg  src={"/"+i} key={i}  />
       )}
       </Other>
 

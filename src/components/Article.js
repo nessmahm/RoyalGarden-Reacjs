@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import styled from 'styled-components'
+import styled from 'styled-components';
+
 
 const Element = styled.div`
    display : flex; 
@@ -20,7 +21,8 @@ const Span = styled.span `
 `
 
 function Article({article,index}) {
-  return (
+  const navigate = useNavigate();
+return (
 
    index%2 ?
    ( 
@@ -33,7 +35,10 @@ function Article({article,index}) {
     <div className='description'>
          <h1 className='title'>{article.title}</h1>
          <p className='text'>{article.introduction}</p>
-         <a className='link' href={  "./plantcare/" + article.name + "/" + article.id } > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
+         <a className='link' 
+          onClick={() => {navigate(`${article.name.toLowerCase() }/${article.id}`); }}
+          > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
+
      </div>
       </Element> )
     :
