@@ -33,7 +33,7 @@ function Article({article,index}) {
     <div className='description'>
          <h1 className='title'>{article.title}</h1>
          <p className='text'>{article.introduction}</p>
-         <a className='link' href={  "/plantcare/" + article.name + "/" + article.id } > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
+         <a className='link' href={  "./plantcare/" + article.name + "/" + article.id } > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
      </div>
       </Element> )
     :
@@ -41,7 +41,7 @@ function Article({article,index}) {
     <div className='description'>
          <h1 className='title'>{article.title} </h1>
          <p className='text'>{article.introduction}</p>
-         <a className='link' href={  "/plantcare/" + article.name + "/" + article.id }  > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
+         <a className='link' href={  "./plantcare/" + article.name + "/" + article.id }  > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
          
      </div> 
 
