@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
 
@@ -36,8 +36,8 @@ return (
          <h1 className='title'>{article.title}</h1>
          <p className='text'>{article.introduction}</p>
          <a className='link' 
-          onClick={() => {navigate(`${article.name.toLowerCase() }/${article.id}`); }}
-          > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
+          href={"/plantcare/" + article.name + "/" + article.id}
+          > <Span couleur={article.linkcolor} > {article.linktext} ppp </Span> </a>
 
      </div>
       </Element> )
@@ -46,7 +46,7 @@ return (
     <div className='description'>
          <h1 className='title'>{article.title} </h1>
          <p className='text'>{article.introduction}</p>
-         <a className='link' href={  "./plantcare/" + article.name + "/" + article.id }  > <Span couleur={article.linkcolor} > {article.linktext} </Span> </a>
+         <Link className='link' to={  "/plantcare/" + article.name + "/" + article.id }  > <Span couleur={article.linkcolor} > {article.linktext} </Span> </Link>
          
      </div> 
 

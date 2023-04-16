@@ -13,7 +13,7 @@ function Tip() {
   const article = Tips.articles.filter((t) => t.id==id )[0]
  return (
 <div className='page-container tip' >
-<Introduction className="introduction" bg={article.image} >
+<Introduction className="introduction" bg={"/"+article.image} >
     <span className='title'>{article.title}</span>
 
 </Introduction>
@@ -36,7 +36,7 @@ function Tip() {
    )}
 </div>
 
-   { art.image && <img src={art.image} /> }
+   { art.image && <img src={"/"+art.image} /> }
 
  </div>
 
